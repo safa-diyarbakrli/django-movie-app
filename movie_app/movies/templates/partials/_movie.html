@@ -1,0 +1,10 @@
+{% load static %}
+
+<div class="card mb-2">
+    <img src="{% static 'img/'|add:movie.picture %}" class="card-img-top" alt="">
+    <div class="card-body">
+    <h5 class="card-title">{{ movie.movie_name }}</h5>
+    <p class="card-text">{{ movie.description }}</p>
+    <a href="{% url 'details' movie.id %}" class="btn btn-danger">Details</a>
+</div>
+</div>
